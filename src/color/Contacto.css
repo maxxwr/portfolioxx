@@ -1,0 +1,57 @@
+/* Estilos básicos para el formulario */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: #4CAF50; /* Verde brillante al hacer foco */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Resplandor verde */
+  }
+  
+  /* Estilo para los campos con error */
+  .input-error {
+    border-color: red !important;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+  }
+  
+  /* Estilo para el mensaje de error */
+  .error {
+    color: red;
+    font-size: 12px;
+    margin: 5px 0;
+  }
+  
+  /* Estilo para el botón */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Animaciones del mensaje de éxito/error */
+  .success {
+    color: green;
+    font-size: 16px;
+  }
+  
+  .danger {
+    color: red;
+    font-size: 16px;
+  }
+  

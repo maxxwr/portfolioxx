@@ -1,0 +1,372 @@
+/* Estilos principales para el banner */
+.banner-section {
+  background-color: #0d0d0d;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animaciones con AOS */
+.banner-img-container {
+  text-align: center;
+  position: relative;
+}
+
+.profile-img-wrapper {
+  width: 80%;
+  max-width: 400px;
+  height: 400px;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  background-color: #1e1e1e;
+  margin: 0 auto;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
+  transition: transform 1s ease-in-out;
+}
+
+.profile-img-wrapper:hover {
+  transform: scale(1.1);
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.profile-img-wrapper:hover .profile-img {
+  filter: grayscale(0%);
+}
+
+.contact-info {
+  margin-top: 20px;
+  color: #aaaaaa;
+  font-size: 1rem;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.text-container {
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.banner-title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #aaaaaa;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeInUp 1s 1s forwards;
+}
+
+.highlight-text {
+  font-size: 3rem;
+  color: #00ff7f;
+  margin-top: 20px;
+  line-height: 1.4;
+  text-shadow: 0px 0px 15px rgba(0, 255, 127, 0.8);
+  animation: glowText 1.5s ease-in-out infinite alternate;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #cccccc;
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+/* Animación de borde */
+@keyframes borderAnimation {
+  0% {
+    border-color: #fff;
+    transform: scale(1);
+  }
+
+  50% {
+    border-color: #E37F00;
+    transform: scale(1.1);
+  }
+
+  100% {
+    border-color: #fff;
+    transform: scale(1);
+  }
+}
+
+/* Contenedor de proyectos */
+.projects-container {
+  display: inline-block;
+  padding: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.8); /* Bordes más suaves */
+  background: rgba(128, 0, 128, 0.1); /* Fondo morado translúcido */
+  box-shadow: 0 4px 15px rgba(128, 0, 128, 0.5); /* Sombra inicial */
+  animation: breathingEffect 3s infinite ease-in-out; /* Animación de respiración */
+  overflow: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Información de proyectos */
+.projects-info {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Resalta el texto */
+}
+
+/* Animación de respiración */
+@keyframes breathingEffect {
+  0%, 100% {
+    transform: scale(1); /* Tamaño normal */
+    box-shadow: 0 4px 15px rgba(128, 0, 128, 0.5); /* Sombra inicial */
+    background: rgba(128, 0, 128, 0.1); /* Fondo translúcido inicial */
+    border-color: rgba(255, 255, 255, 0.8); /* Borde inicial */
+  }
+  50% {
+    transform: scale(1.05); /* Expansión */
+    box-shadow: 0 8px 25px rgba(128, 0, 128, 0.8); /* Sombra expandida */
+    background: rgba(128, 0, 128, 0.2); /* Fondo más intenso */
+    border-color: rgba(255, 255, 255, 0.6); /* Borde más tenue */
+  }
+}
+
+/* Media Queries para Responsividad */
+
+/* Pantallas pequeñas (como teléfonos móviles) */
+@media (max-width: 480px) {
+  .projects-info {
+    font-size: 1.5rem; /* Reduce el tamaño de la fuente */
+    white-space: normal; /* Permite el ajuste de texto */
+  }
+
+  .projects-container {
+    padding: 12px; /* Reduce el padding */
+    max-width: 300px; /* Tamaño máximo más pequeño */
+    margin: 4rem auto; /* Centrado y espacio reducido */
+  }
+}
+
+/* Pantallas extra pequeñas (teléfonos muy pequeños, como Galaxy Mini) */
+@media (max-width: 320px) {
+  .projects-info {
+    font-size: 1.2rem; /* Tamaño de fuente aún más pequeño */
+  }
+
+  .projects-container {
+    padding: 10px; /* Reduce más el padding */
+    max-width: 280px; /* Tamaño máximo muy pequeño */
+    margin: 5px auto; /* Ajuste para centrado */
+  }
+}
+
+
+
+.social-links {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  animation: slideIn 2s ease-in-out;
+}
+
+.follow-text {
+  writing-mode: vertical-rl;
+  text-align: center;
+  color: #aaaaaa;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-icon {
+  color: #00ff7f;
+  font-size: 2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowText {
+  0% {
+    text-shadow: 0px 0px 10px rgba(0, 255, 127, 0.6);
+  }
+
+  50% {
+    text-shadow: 0px 0px 25px rgba(0, 255, 127, 1);
+  }
+
+  100% {
+    text-shadow: 0px 0px 10px rgba(0, 255, 127, 0.6);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Efecto de burbujas animadas con mouse */
+@keyframes bubbleEffect {
+  0% {
+    transform: scale(0);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 255, 127, 0.1);
+  animation: bubbleEffect 2s ease-out;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* Ensuring bubbles appear and disappear with animation */
+.bubble-active {
+  animation: bubbleEffect 2s ease-out forwards;
+}
+
+/* Medios de Pantalla Responsivos */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .profile-img-wrapper {
+    width: 90%;
+    height: 350px;
+  }
+
+  .projects-info {
+    font-size: 2rem;
+  }
+
+  .highlight-text {
+    font-size: 2.5rem;
+  }
+
+  .banner-title {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  .profile-img-wrapper {
+    width: 100%;
+    height: 300px;
+  }
+
+  .projects-info {
+    font-size: 1.8rem;
+  }
+
+  .highlight-text {
+    font-size: 2rem;
+  }
+
+  .banner-title {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .social-links {
+    right: 20px;
+  }
+
+  .social-icon {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+
+/* Estilo base para la imagen */
+.profile-img {
+  width: 100%; 
+  height: auto; 
+  border-radius: 50%; 
+  max-width: 280px; /* Tamaño máximo */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .profile-img {
+    max-width: 200px; /* Ajusta el tamaño máximo en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-img {
+    max-width: 150px; /* Ajusta aún más para pantallas extra pequeñas */
+  }
+}

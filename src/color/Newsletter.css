@@ -1,0 +1,200 @@
+/* Newsletter.css */
+
+/* Estilos generales */
+.newsletter-bx {
+  padding: 50px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+  opacity: 0;
+  animation: fadeInUp 3s ease-out forwards, bounceEffect 5s ease infinite;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+.newsletter-bx:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.newsletter-bx h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.newsletter-bx:hover h3 {
+  color: #6e156e;
+  /* Cambio de color del título en hover */
+  transform: scale(1.1);
+  /* Aumento del tamaño del título */
+}
+
+/* Contenedor de la caja de correo */
+
+.new-email-bx input {
+  width: 70%;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #f4f4f4;
+  border: 2px solid #f1f1f1;
+  transition: all 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.new-email-bx input:focus {
+  outline: none;
+  border-color: #1f0118;
+  box-shadow: 0 0 8px rgba(226, 225, 223, 0.3);
+  background-color: #e6e5e3;
+  /* Fondo amarillo suave al enfocar */
+}
+
+.new-email-bx button {
+  padding: 15px 30px;
+  background-color: #E37F00;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.new-email-bx button:hover {
+  background-color: #c16e00;
+  transform: scale(1.1);
+  /* Aumento en el tamaño del botón */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Efectos de transiciones para pantalla pequeña */
+@media (max-width: 992px) {
+  .newsletter-bx {
+    padding: 40px;
+  }
+
+  .newsletter-bx h3 {
+    font-size: 28px;
+    margin-bottom: 18px;
+  }
+
+  .new-email-bx input {
+    width: 65%;
+  }
+
+  .new-email-bx button {
+    width: 35%;
+  }
+}
+
+@media (max-width: 768px) {
+  .newsletter-bx {
+    padding: 30px;
+    transform: translateY(20px);
+  }
+
+  .newsletter-bx h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .new-email-bx {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .new-email-bx input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 16px;
+  }
+
+  .new-email-bx button {
+    width: 100%;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .newsletter-bx {
+    padding: 25px;
+    transform: translateY(30px);
+  }
+
+  .new-email-bx input {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .new-email-bx button {
+    font-size: 15px;
+    padding: 12px 20px;
+  }
+}
+
+/* Efecto de entrada suave para los elementos */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efecto de deslizamiento para los elementos dentro */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Nueva animación de rebote para el contenedor principal */
+@keyframes bounceEffect {
+
+  0%,
+  100% {
+    transform: translateY(0);
+    /* Inicio y fin sin movimiento */
+  }
+
+  25% {
+    transform: translateY(-10px);
+    /* Rebote hacia arriba */
+  }
+
+  50% {
+    transform: translateY(5px);
+    /* Rebote hacia abajo */
+  }
+
+  75% {
+    transform: translateY(-5px);
+    /* Rebote hacia arriba */
+  }
+}
+
+/* Movimiento suave para los botones */
+@keyframes buttonMove {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}

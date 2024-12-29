@@ -1,0 +1,80 @@
+/* Contenedor principal del proyecto */
+.proj-imgbx {
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden; /* Para asegurar que las imágenes no se desborden */
+  border-radius: 10px;
+  background-color: #f5f5f5; /* Fondo opcional */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease;
+}
+
+.proj-imgbx:hover {
+  transform: scale(1.03); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Estilo para las imágenes */
+.proj-imgbx img {
+  width: 105%; /* Asegura que las imágenes ocupen todo el contenedor */
+  height: auto; /* Mantiene las proporciones de las imágenes */
+  object-fit: cover; /* Asegura que las imágenes se ajusten correctamente */
+}
+
+/* Texto sobre las imágenes */
+.proj-txtx {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.proj-imgbx:hover .proj-txtx {
+  opacity: 1;
+}
+
+/* Contenedor de la fila para mantener diseño fluido */
+.project .row {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas pequeñas */
+  justify-content: center; /* Centra las tarjetas */
+}
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 992px) {
+  .proj-imgbx {
+    height: 300px; /* Fija la altura para mayor consistencia en pantallas grandes */
+  }
+
+  .proj-imgbx img {
+    height: 100%;
+    object-fit: cover; /* Asegura que las imágenes llenen el espacio */
+  }
+}
+
+/* Ajustes para pantallas medianas */
+@media (max-width: 768px) {
+  .proj-imgbx {
+    height: auto; /* Permite que las imágenes se ajusten automáticamente */
+  }
+
+  .proj-imgbx img {
+    object-fit: contain; /* Evita recortes innecesarios */
+  }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 576px) {
+  .proj-imgbx {
+    margin-bottom: 15px; /* Reduce el espacio entre tarjetas */
+  }
+
+  .proj-txtx {
+    font-size: 0.9rem; /* Reduce el tamaño del texto */
+    padding: 8px;
+  }
+}
