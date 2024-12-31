@@ -33,7 +33,7 @@ export const NavBar = () => {
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
-          <Navbar.Brand href="/" style={{
+          <Navbar.Brand href="https://maxxwr.github.io/portfolioxx" style={{
             fontSize: '1.2rem',
             fontWeight: '700',
             color: '#A9A9A9',

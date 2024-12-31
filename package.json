@@ -2,6 +2,7 @@
   "name": "portafolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://maxxwr.github.io/portfolioxx",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@emailjs/browser": "^4.4.1",
@@ -131,7 +132,6 @@
       "^react-native$": "react-native-web",
       "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
     },
-    "homepage": "https://maxxwr.github.io/portfoliomx/",
     "moduleFileExtensions": [
       "web.js",
       "js",
@@ -158,5 +158,4 @@
   "devDependencies": {
     "gh-pages": "^6.2.0"
   }
-  
 }
