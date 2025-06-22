@@ -24,12 +24,12 @@ export const Projects = () => {
   const webProjects = [
     {
       title: "API REST con Java",
-      description: "API RESTful para gestionar datos usando Java y MySQL.",
+      description: "API de comprobantes electrónicos con Java, MySQL y React.",
       imgUrl: projImg1,
     },
     {
-      title: "Página Dinámica con React",
-      description: "Desarrollo de interfaces interactivas y dinámicas con React.",
+      title: "Interfaz React",
+      description: "Componentes dinámicos y navegación interactiva con React.",
       imgUrl: projImg4,
     },
     {
@@ -38,15 +38,16 @@ export const Projects = () => {
       imgUrl: projImg7,
     },
     {
-      title: "E-commerce Básico",
-      description: "Tienda online con carrito y funcionalidad básica.",
+      title: "Tienda Online",
+      description: "Carrito funcional y estructura básica de e-commerce.",
       imgUrl: projImg6,
     },
     {
       title: "Sistema de Usuarios",
-      description: "Gestión de usuarios y roles usando HTML, CSS, JS y PHP.",
+      description: "Login, registro y control de roles con PHP y JavaScript.",
       imgUrl: projImg5,
     },
+
     {
       title: "Landing Page Responsive",
       description: "Página web adaptable con Bootstrap.",

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
-import headerImg from "../assets/img/max.png";
+import headerImg from "../assets/img/gatoxd.jpg";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import "../color/Banner.css";
@@ -99,7 +99,7 @@ export const Banner = () => {
               <h3 className="banner-title"><h2>Hola, soy max winchez</h2></h3>
               <h2 className="highlight-text">{text}</h2>
               <p className="description">
-                Desarrollo backend, aplicaciones web con React e integración de soluciones con Deep Learning.
+                Desarrollo backend, frontend e integración de soluciones con Deep Learning.
               </p>
               <div class="projects-container">
                 <div class="projects-info">
