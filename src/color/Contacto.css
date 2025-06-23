@@ -23,7 +23,7 @@ input, textarea {
   
   /* Estilo para el mensaje de error */
   .error {
-    color: red;
+    color: rgb(235, 67, 67);
     font-size: 12px;
     margin: 5px 0;
   }
@@ -45,13 +45,15 @@ input, textarea {
   }
   
   /* Animaciones del mensaje de éxito/error */
-  .success {
-    color: green;
-    font-size: 16px;
-  }
-  
-  .danger {
-    color: red;
-    font-size: 16px;
-  }
-  
+ .success {
+  color: #FFD700; /* Dorado fuerte */
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700; /* Sombra dorada */
+}
+ .danger {
+  color: #070000; /* Rojo fuerte/brillante */
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 0 0 5px #c96d6d, 0 0 10px #bd6363;
+}

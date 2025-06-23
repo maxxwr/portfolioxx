@@ -1,3 +1,8 @@
+.project {
+  padding: 80px 0;
+  position: relative;
+  background-color: black;
+}
 /* Contenedor principal del proyecto */
 .proj-imgbx {
   position: relative;
@@ -78,3 +83,5 @@
     padding: 8px;
   }
 }
+
+

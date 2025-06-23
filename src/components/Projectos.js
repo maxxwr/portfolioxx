@@ -14,10 +14,11 @@ import projImg11 from "../assets/img/reco.gif";
 import projImg12 from "../assets/img/datos.gif";
 import projImg13 from "../assets/img/analisis.jpeg";
 import projImg14 from "../assets/img/tareas.jpeg";
-import colorSharp2 from "../assets/img/react.jpeg";
+//import colorSharp2 from "../assets/img/react.jpeg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import "../color/Projectos.css"
+import BackgroundAnimation from "./animation";
 
 export const Projects = () => {
 
@@ -109,6 +110,7 @@ export const Projects = () => {
 
   return (
     <section className="project" id="projects">
+      <BackgroundAnimation />
       <Container>
         <Row>
           <Col size={12}>
@@ -167,7 +169,7 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
+      {/* <img className="background-image-right" src={colorSharp2} /> */}
     </section>
   );
 };

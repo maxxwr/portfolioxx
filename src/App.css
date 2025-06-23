@@ -74,13 +74,6 @@ input:focus, textarea:focus, select:focus {
 	}
 }
 
-p.success {
-	color: green;
-}
-
-p.danger {
-	color: red;
-}
 /************ Navbar Css ************/
 nav.navbar {
   padding: 18px 0;
@@ -311,7 +304,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   padding: 60px 50px;
   margin-top: -60px;
+  position: relative; /* 👈 necesario para que z-index funcione */
+  z-index: 1;         /* 👈 para que esté encima del fondo y del canvas */
 }
+
 .skill h2 {
 	font-size: 45px;
 	font-weight: 700;
@@ -337,15 +333,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: absolute;
   bottom: 0;
   width: 40%;
-  z-index: -4;
+  z-index: -1; /* 👈 Cambia de 0 a -1 para que quede ENCIMA del canvas (z-index: 0) */
 }
 
 /************ Projects Css ************/
-.project {
-  padding: 80px 0;
-  position: relative;
-  background-color: black;
-}
 .project h2 {
 	font-size: 45px;
 	font-weight: 700;
