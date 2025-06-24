@@ -2,24 +2,25 @@ import React, { useEffect, useRef } from "react";
 
 const BackgroundAnimation = () => {
   const canvasRef = useRef(null);
-  const animationRef = useRef(null); 
+  const animationRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
 
+    const isMobile = window.innerWidth < 768;
+    const numParticles = isMobile ? 20 : 150;
+
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
     const particles = [];
-    const numParticles = 150;
-
     for (let i = 0; i < numParticles; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        radius: Math.random() * 3,
-        speedY: Math.random() * 2 + 1,
+        radius: Math.random() * 0.7 + 0.5,
+        speedY: Math.random() * 2 + 3, 
       });
     }
 
@@ -43,9 +44,8 @@ const BackgroundAnimation = () => {
       animationRef.current = requestAnimationFrame(animate);
     }
 
-    animate();
+    animationRef.current = requestAnimationFrame(animate);
 
-    
     return () => {
       cancelAnimationFrame(animationRef.current);
     };

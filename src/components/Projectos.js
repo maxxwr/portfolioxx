@@ -1,7 +1,7 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProyectoCard";
 import projImg1 from "../assets/img/spin.jpeg";
-import projImg2 from "../assets/img/bustrap.jpeg";
+import projImg2 from "../assets/img/bustrap.jpg";
 import projImg3 from "../assets/img/apkmovile.jpeg";
 import projImg4 from "../assets/img/ractga.jpeg";
 import projImg5 from "../assets/img/html1.gif";
@@ -14,6 +14,7 @@ import projImg11 from "../assets/img/reco.gif";
 import projImg12 from "../assets/img/datos.gif";
 import projImg13 from "../assets/img/analisis.jpeg";
 import projImg14 from "../assets/img/tareas.jpeg";
+import projImg15 from "../assets/img/javat.jpg";
 //import colorSharp2 from "../assets/img/react.jpeg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -25,17 +26,17 @@ export const Projects = () => {
   const webProjects = [
     {
       title: "API REST con Java",
-      description: "API de comprobantes electrónicos con Java, MySQL y React.",
+      description: "Servicio REST para validar y emitir comprobantes electrónicos.",
       imgUrl: projImg1,
     },
     {
       title: "Interfaz React",
-      description: "Componentes dinámicos y navegación interactiva con React.",
+      description: "Componentes dinámicos y navegación fluida.",
       imgUrl: projImg4,
     },
     {
       title: "Web Dinámica con PHP",
-      description: "Conexión a base de datos con MySQL y PHP.",
+      description: "Sistema de autenticación con conexión a base de datos.",
       imgUrl: projImg7,
     },
     {
@@ -51,8 +52,13 @@ export const Projects = () => {
 
     {
       title: "Landing Page Responsive",
-      description: "Página web adaptable con Bootstrap.",
+      description: "Interfaz adaptable con enfoque en usabilidad y estructura optimizada para distintos tipos de dispositivos.",
       imgUrl: projImg2,
+    },
+    {
+      title: "API de Tipo de Cambio",
+      description: "Consulta segura del tipo de cambio diario vía API autenticada.",
+      imgUrl: projImg15,
     },
   ];
 
