@@ -103,10 +103,10 @@
 .projects-container {
   display: inline-block;
   padding: 20px;
-  border: 3px solid rgba(255, 255, 255, 0.8); /* Bordes más suaves */
-  background: rgba(128, 0, 128, 0.1); /* Fondo morado translúcido */
-  box-shadow: 0 4px 15px rgba(128, 0, 128, 0.5); /* Sombra inicial */
-  animation: breathingEffect 3s infinite ease-in-out; /* Animación de respiración */
+  border: 3px solid rgba(255, 255, 255, 0.8); 
+  background: rgba(128, 0, 128, 0.1); 
+  box-shadow: 0 4px 15px rgba(128, 0, 128, 0.5); 
+  animation: breathingEffect 3s infinite ease-in-out; 
   overflow: hidden;
   max-width: 100%;
   box-sizing: border-box;
@@ -119,51 +119,49 @@
   color: #fff;
   text-align: center;
   white-space: nowrap;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Resalta el texto */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); 
 }
 
 /* Animación de respiración */
 @keyframes breathingEffect {
   0%, 100% {
-    transform: scale(1); /* Tamaño normal */
-    box-shadow: 0 4px 15px rgba(128, 0, 128, 0.5); /* Sombra inicial */
-    background: rgba(128, 0, 128, 0.1); /* Fondo translúcido inicial */
-    border-color: rgba(255, 255, 255, 0.8); /* Borde inicial */
+    transform: scale(1); 
+    box-shadow: 0 4px 15px rgba(128, 0, 128, 0.5); 
+    background: rgba(128, 0, 128, 0.1); 
+    border-color: rgba(255, 255, 255, 0.8); 
   }
   50% {
     transform: scale(1.05); /* Expansión */
-    box-shadow: 0 8px 25px rgba(128, 0, 128, 0.8); /* Sombra expandida */
-    background: rgba(128, 0, 128, 0.2); /* Fondo más intenso */
-    border-color: rgba(255, 255, 255, 0.6); /* Borde más tenue */
+    box-shadow: 0 8px 25px rgba(128, 0, 128, 0.8); 
+    background: rgba(128, 0, 128, 0.2); 
+    border-color: rgba(255, 255, 255, 0.6); 
   }
 }
 
 /* Media Queries para Responsividad */
-
-/* Pantallas pequeñas (como teléfonos móviles) */
 @media (max-width: 480px) {
   .projects-info {
-    font-size: 1.5rem; /* Reduce el tamaño de la fuente */
-    white-space: normal; /* Permite el ajuste de texto */
+    font-size: 1.5rem; 
+    white-space: normal; 
   }
 
   .projects-container {
-    padding: 12px; /* Reduce el padding */
-    max-width: 300px; /* Tamaño máximo más pequeño */
-    margin: 4rem auto; /* Centrado y espacio reducido */
+    padding: 12px; 
+    max-width: 300px; 
+    margin: 4rem auto; 
   }
 }
 
 /* Pantallas extra pequeñas (teléfonos muy pequeños, como Galaxy Mini) */
 @media (max-width: 320px) {
   .projects-info {
-    font-size: 1.2rem; /* Tamaño de fuente aún más pequeño */
+    font-size: 1.2rem; 
   }
 
   .projects-container {
-    padding: 10px; /* Reduce más el padding */
-    max-width: 280px; /* Tamaño máximo muy pequeño */
-    margin: 5px auto; /* Ajuste para centrado */
+    padding: 10px; 
+    max-width: 280px; 
+    margin: 5px auto; 
   }
 }
 
@@ -347,26 +345,23 @@
   }
 }
 
-
-
-
 /* Estilo base para la imagen */
 .profile-img {
   width: 100%; 
   height: auto; 
   border-radius: 50%; 
-  max-width: 280px; /* Tamaño máximo */
+  max-width: 280px; 
 }
 
 /* Responsividad */
 @media (max-width: 768px) {
   .profile-img {
-    max-width: 200px; /* Ajusta el tamaño máximo en pantallas pequeñas */
+    max-width: 200px; 
   }
 }
 
 @media (max-width: 480px) {
   .profile-img {
-    max-width: 150px; /* Ajusta aún más para pantallas extra pequeñas */
+    max-width: 150px; 
   }
 }

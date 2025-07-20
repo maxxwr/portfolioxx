@@ -113,7 +113,7 @@ export const Banner = () => {
         <div className="follow-text">Follow Me</div>
         <div className="social-icons">
           <a
-            href="https://www.linkedin.com/feed/"
+            href="https://www.linkedin.com/in/max-winchez-rivera-3719a4237/"
             target="_blank"
             rel="noreferrer"
             className="social-icon"
@@ -129,7 +129,7 @@ export const Banner = () => {
             <FaGithub />
           </a>
           <a
-            href="https://www.facebook.com/"
+            href="https://www.facebook.com/wr.max.404270"
             target="_blank"
             rel="noreferrer"
             className="social-icon"

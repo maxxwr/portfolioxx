@@ -1,8 +1,13 @@
 /* Haciendo la imagen más grande */
 .footer .footer-logo {
-    max-width: 100%;
-    height: auto;
-    max-height: 300px; /* Ajustamos la altura máxima */
-    object-fit: contain;
-  }
-  
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  /* Ajustamos la altura máxima */
+  object-fit: contain;
+}
+
+.footer-time {
+  margin-left: 10px;
+  font-size: 14px;
+}

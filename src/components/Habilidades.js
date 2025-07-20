@@ -4,9 +4,9 @@ import meter1 from "../assets/img/java.png";
 import meter2 from "../assets/img/python.png";
 import meter3 from "../assets/img/react.png";
 import meter4 from "../assets/img/c-char.png";
-import meter5 from "../assets/img/vue.png"
+import meter5 from "../assets/img/gooo.png"
 import meter6 from "../assets/img/myql.png"
-import meter7 from "../assets/img/htmlycss.png"
+import meter7 from "../assets/img/expresss.jpg"
 import colorSharp from "../assets/img/color-sharp.png";
 import "../color/Habilidades.css";
 
@@ -41,31 +41,31 @@ export const Skills = () => {
               <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                 <div className="item">
                   <img src={meter1} alt="Java" />
-                  <h5>Java</h5>
+                  <h5>JAVA</h5>
                 </div>
                 <div className="item">
                   <img src={meter2} alt="Python" />
-                  <h5>Python</h5>
+                  <h5>PYTHON</h5>
                 </div>
                 <div className="item">
                   <img src={meter3} alt="React" />
-                  <h5>React</h5>
+                  <h5>REACT</h5>
                 </div>
                 <div className="item">
                   <img src={meter4} alt="C#" />
-                  <h5>C-shar</h5>
+                  <h5>C-SHAR</h5>
                 </div>
                 <div className="item">
-                  <img src={meter5} alt="Vue" />
-                  <h5>Vue</h5>
+                  <img src={meter5} alt="GO" />
+                  <h5>GO</h5>
                 </div>
                 <div className="item">
                   <img src={meter6} alt="Myql" />
-                  <h5>Myql</h5>
+                  <h5>MYSQL</h5>
                 </div>
                 <div className="item">
-                  <img src={meter7} alt="Html and css" />
-                  <h5>html(js) </h5>
+                  <img src={meter7} alt="Express.js" />
+                  <h5>JS</h5>
                 </div>
               </Carousel>
             </div>

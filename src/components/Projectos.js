@@ -1,11 +1,11 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProyectoCard";
-import projImg1 from "../assets/img/spin.jpeg";
-import projImg2 from "../assets/img/bustrap.jpg";
+import projImg1 from "../assets/img/spin.jpg";
+import projImg2 from "../assets/img/stripe.jpg";
 import projImg3 from "../assets/img/apkmovile.jpeg";
 import projImg4 from "../assets/img/ractga.jpeg";
 import projImg5 from "../assets/img/html1.gif";
-import projImg6 from "../assets/img/phpconex.jpeg";
+import projImg6 from "../assets/img/phpconex.jpg";
 import projImg7 from "../assets/img/phpgoo.jpeg";
 import projImg8 from "../assets/img/iber.jpeg";
 import projImg9 from "../assets/img/unity.jpeg";
@@ -15,6 +15,7 @@ import projImg12 from "../assets/img/datos.gif";
 import projImg13 from "../assets/img/analisis.jpeg";
 import projImg14 from "../assets/img/tareas.jpeg";
 import projImg15 from "../assets/img/javat.jpg";
+import projImg16 from "../assets/img/goland.jpg";
 //import colorSharp2 from "../assets/img/react.jpeg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -30,8 +31,8 @@ export const Projects = () => {
       imgUrl: projImg1,
     },
     {
-      title: "Interfaz React",
-      description: "Componentes dinámicos y navegación fluida.",
+      title: "Landing Page Responsive",
+      description: "Interfaz adaptable con enfoque en usabilidad y estructura optimizada para distintos tipos de dispositivos.",
       imgUrl: projImg4,
     },
     {
@@ -51,8 +52,8 @@ export const Projects = () => {
     },
 
     {
-      title: "Landing Page Responsive",
-      description: "Interfaz adaptable con enfoque en usabilidad y estructura optimizada para distintos tipos de dispositivos.",
+      title: "E-commerce con React",
+      description: "Tienda en línea con pagos seguros vía Stripe.",
       imgUrl: projImg2,
     },
     {
@@ -60,6 +61,12 @@ export const Projects = () => {
       description: "Consulta segura del tipo de cambio diario vía API autenticada.",
       imgUrl: projImg15,
     },
+    {
+      title: "Sistema de Mensajería con Go",
+      description: "Chat en tiempo real y, autenticación segura y funciones básicas de usuario.",
+      imgUrl: projImg16,
+    },
+    
   ];
 
   const mobileProjects = [
@@ -125,7 +132,7 @@ export const Projects = () => {
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <h2>Proyectos</h2>
                   <p>
-                    Aquí puedes explorar algunos de mis proyectos en los que he trabajado, incluyendo desarrollo web con React e inteligencia artificial.
+                    Aquí puedes explorar algunos de mis proyectos en los que he trabajado, incluyendo desarrollo web e inteligencia artificial.
                   </p>
                   <Tab.Container id="projects-tabs" defaultActiveKey="web">
                     <Nav
