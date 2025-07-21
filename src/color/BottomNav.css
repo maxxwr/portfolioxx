@@ -1,0 +1,41 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%) translateY(50px);
+  background: rgba(17, 17, 17, 0.6); /* Vidrio más translúcido */
+  padding: 10px 25px;
+  border-radius: 40px;
+  display: flex;
+  gap: 52px;
+  z-index: 9999;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  opacity: 0;
+  animation: slideUpFadeIn 0.8s ease forwards;
+}
+
+.bottom-nav a {
+  color: #aaa;
+  text-decoration: none;
+  transition: all 0.3s ease;
+ 
+}
+
+.bottom-nav a:hover,
+.bottom-nav .active-icon {
+  color: #fff;
+  transform: scale(1.15);
+}
+
+@keyframes slideUpFadeIn {
+  from {
+    transform: translateX(-50%) translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}

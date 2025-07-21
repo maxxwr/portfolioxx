@@ -1,5 +1,3 @@
-/* Newsletter.css */
-
 /* Estilos generales */
 .newsletter-bx {
   padding: 50px;
@@ -27,13 +25,10 @@
 
 .newsletter-bx:hover h3 {
   color: #6e156e;
-  /* Cambio de color del título en hover */
   transform: scale(1.1);
-  /* Aumento del tamaño del título */
 }
 
 /* Contenedor de la caja de correo */
-
 .new-email-bx input {
   width: 70%;
   padding: 15px;
@@ -49,7 +44,6 @@
   border-color: #1f0118;
   box-shadow: 0 0 8px rgba(226, 225, 223, 0.3);
   background-color: #e6e5e3;
-  /* Fondo amarillo suave al enfocar */
 }
 
 .new-email-bx button {
@@ -66,7 +60,6 @@
 .new-email-bx button:hover {
   background-color: #c16e00;
   transform: scale(1.1);
-  /* Aumento en el tamaño del botón */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -167,22 +160,18 @@
   0%,
   100% {
     transform: translateY(0);
-    /* Inicio y fin sin movimiento */
   }
 
   25% {
     transform: translateY(-10px);
-    /* Rebote hacia arriba */
   }
 
   50% {
     transform: translateY(5px);
-    /* Rebote hacia abajo */
   }
 
   75% {
     transform: translateY(-5px);
-    /* Rebote hacia arriba */
   }
 }
 

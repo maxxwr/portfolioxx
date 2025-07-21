@@ -36,7 +36,7 @@ export const Projects = () => {
       imgUrl: projImg4,
     },
     {
-      title: "Web Dinámica con PHP",
+      title: "Web Dinámica",
       description: "Sistema de autenticación con conexión a base de datos.",
       imgUrl: projImg7,
     },
@@ -46,14 +46,14 @@ export const Projects = () => {
       imgUrl: projImg6,
     },
     {
-      title: "Sistema de Usuarios",
-      description: "Login, registro y control de roles con PHP y JavaScript.",
+      title: "Portal de Autenticación",
+      description: "Sistema de registro e inicio de sesión con control de acceso por roles.",
       imgUrl: projImg5,
     },
 
     {
       title: "E-commerce con React",
-      description: "Tienda en línea con pagos seguros vía Stripe.",
+      description: "Tienda en línea con pagos seguros vía STRIPE.",
       imgUrl: projImg2,
     },
     {
@@ -148,7 +148,7 @@ export const Projects = () => {
                         <Nav.Link eventKey="mobile">Proyectos Móviles</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="ai">Proyectos de IA</Nav.Link>
+                        <Nav.Link eventKey="ai">Proyectos IA</Nav.Link>
                       </Nav.Item>
                     </Nav>
 

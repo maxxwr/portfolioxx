@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaFacebook, FaEnvelope, FaPhone } from "react-icons/fa";
 import headerImg from "../assets/img/gatoxd.jpg";
 import "aos/dist/aos.css";
 import AOS from "aos";
@@ -86,10 +86,15 @@ export const Banner = () => {
                 className="profile-img"
               />
             </div>
-            <div className="contact-info">
-              <p>maxwinchez@gmail.com</p>
-              <p>+ (51) 910 339 920</p>
-            </div>
+          <div className="contact-info">
+            <p>
+              <FaEnvelope className="icon" /> maxwinchez@gmail.com
+            </p>
+            <p>
+              <FaPhone className="icon" /> +(51) 910 339 920
+            </p>
+          </div>
+
           </Col>
 
           <Col xs={12} md={6} className="text-container">

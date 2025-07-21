@@ -11,8 +11,8 @@ input, textarea {
   
   input:focus, textarea:focus {
     outline: none;
-    border-color: #4CAF50; /* Verde brillante al hacer foco */
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Resplandor verde */
+    border-color: #4CAF50; 
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); 
   }
   
   /* Estilo para los campos con error */
@@ -46,13 +46,13 @@ input, textarea {
   
   /* Animaciones del mensaje de éxito/error */
  .success {
-  color: #FFD700; /* Dorado fuerte */
+  color: #FFD700; 
   font-size: 16px;
   font-weight: bold;
-  text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700; /* Sombra dorada */
+  text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700; 
 }
  .danger {
-  color: #070000; /* Rojo fuerte/brillante */
+  color: #070000; 
   font-size: 16px;
   font-weight: bold;
   text-shadow: 0 0 5px #c96d6d, 0 0 10px #bd6363;
