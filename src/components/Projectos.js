@@ -12,7 +12,7 @@ import projImg9 from "../assets/img/unity.jpeg";
 import projImg10 from "../assets/img/AI.gif";
 import projImg11 from "../assets/img/reco.gif";
 import projImg12 from "../assets/img/datos.gif";
-import projImg13 from "../assets/img/analisis.jpeg";
+import projImg13 from "../assets/img/analisis.gif";
 import projImg14 from "../assets/img/tareas.jpeg";
 import projImg15 from "../assets/img/javat.jpg";
 import projImg16 from "../assets/img/goland.jpg";

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaLinkedin, FaGithub, FaFacebook, FaEnvelope, FaPhone } from "react-icons/fa";
-import headerImg from "../assets/img/gatoxd.jpg";
+import headerImg from "../assets/img/gatin.gif";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import "../color/Banner.css";
