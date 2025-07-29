@@ -1,12 +1,67 @@
-/* Haciendo la imagen más grande */
-.footer .footer-logo {
+/*para dar espacio <br/> para el footer*/
+.footer .social-icon {
+  margin-bottom: 20px; 
+}
+
+/* para el contenedor del logo */
+.footer-logo-container {
+  text-align: center;  
+  margin-bottom: 20px; 
+}
+
+/* para la imagen del logo */
+.footer-logo {
   max-width: 100%;
   height: auto;
-  max-height: 300px;
+  max-height: 250px; 
   object-fit: contain;
 }
 
+/* para el tiempo y hora */
 .footer-time {
   margin-left: 10px;
   font-size: 14px;
+  color: #888;  
+  font-weight: normal;
+}
+
+/*footer hr {
+  border: 0;
+  border-top: 1px solid #ccc; 
+  margin: 20px 0; 
+}*/
+
+/* para el texto del footer */
+footer .login-footer p {
+  font-size: 14px; 
+  color: #888; 
+  font-weight: normal;
+}
+
+footer .footer-date p {
+  font-size: 14px; 
+  color: #888; 
+  font-weight: normal;
+}
+
+@media (max-width: 576px) {
+  .footer-logo-container {
+    text-align: center; 
+  }
+
+  .footer-logo {
+    max-height: 200px; 
+  }
+
+  .footer-time {
+    font-size: 12px; 
+  }
+
+  footer .login-footer p {
+    font-size: 12px; 
+  }
+
+  footer .footer-date p {
+    font-size: 12px; 
+  }
 }

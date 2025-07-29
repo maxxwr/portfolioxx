@@ -9,7 +9,6 @@ import "../color/Contacto.css";
 export const Contact = () => {
   const formInitialDetails = {
     nombre: '',
-    apellido: '',
     email: '',
     telefono: '',
     mensaje: ''
@@ -30,7 +29,6 @@ export const Contact = () => {
   const validateForm = () => {
     const errors = {};
     if (!formDetails.nombre) errors.nombre = "El nombre es obligatorio.";
-    if (!formDetails.apellido) errors.apellido = "El apellido es obligatorio.";
     if (!formDetails.email) {
       errors.email = "El correo electrónico es obligatorio.";
     } else if (!/\S+@\S+\.\S+/.test(formDetails.email)) {
@@ -60,7 +58,6 @@ export const Contact = () => {
         process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         {
           nombre: formDetails.nombre,
-          apellido: formDetails.apellido,
           email: formDetails.email,
           telefono: formDetails.telefono,
           mensaje: formDetails.mensaje,
@@ -102,7 +99,7 @@ export const Contact = () => {
                   <h2>Contactame</h2>
                   <form onSubmit={handleSubmit}>
                     <Row>
-                      <Col size={12} sm={6} className="px-1">
+                      <Col size={12} sm={6} md={6} className="px-1">
                         <input
                           type="text"
                           value={formDetails.nombre}
@@ -111,16 +108,7 @@ export const Contact = () => {
                         />
                         {formErrors.nombre && <p className="error">{formErrors.nombre}</p>}
                       </Col>
-                      <Col size={12} sm={6} className="px-1">
-                        <input
-                          type="text"
-                          value={formDetails.apellido}
-                          placeholder="Apellido"
-                          onChange={(e) => onFormUpdate('apellido', e.target.value)}
-                        />
-                        {formErrors.apellido && <p className="error">{formErrors.apellido}</p>}
-                      </Col>
-                      <Col size={12} sm={6} className="px-1">
+                      <Col size={12} sm={6} md={6} className="px-1">
                         <input
                           type="email"
                           value={formDetails.email}
@@ -129,7 +117,7 @@ export const Contact = () => {
                         />
                         {formErrors.email && <p className="error">{formErrors.email}</p>}
                       </Col>
-                      <Col size={12} sm={6} className="px-1">
+                      <Col size={12} sm={6} md={6} className="px-1">
                         <input
                           type="tel"
                           value={formDetails.telefono}
@@ -138,7 +126,7 @@ export const Contact = () => {
                         />
                         {formErrors.telefono && <p className="error">{formErrors.telefono}</p>}
                       </Col>
-                      <Col size={12} className="px-1">
+                      <Col size={12} sm={12} md={12} className="px-1">
                         <textarea
                           rows="6"
                           value={formDetails.mensaje}

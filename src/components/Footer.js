@@ -10,11 +10,12 @@ import "../color/Footer.css";
 export const Footer = () => {
 
   const [hora, setHora] = useState(new Date().toLocaleTimeString());
+  const [fecha, setFecha] = useState(new Date().toLocaleDateString("es-PE", { weekday: "long", day: "numeric", month: "long", year: "numeric" }));
 
-  //by MAXXXX
   useEffect(() => {
     const interval = setInterval(() => {
       setHora(new Date().toLocaleTimeString());
+      setFecha(new Date().toLocaleDateString("es-PE", { weekday: "long", day: "numeric", month: "long", year: "numeric" }));
     }, 1000);
 
     return () => clearInterval(interval);
@@ -25,7 +26,8 @@ export const Footer = () => {
       <Container>
         <Row className="align-items-center">
           <MailchimpForm />
-          <Col size={12} sm={6}>
+          {/* para poner el logo parte arriba del iconos redes sociales-> kitar todos los sm={6}*/}
+          <Col size={12} sm={6} className="footer-logo-container">
             <img src={logo} alt="Logo" className="footer-logo" />
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
@@ -46,6 +48,9 @@ export const Footer = () => {
                 <span className="footer-time">{hora}</span>
               </p>
             </footer>
+            <div className="footer-date">
+              <p>{fecha}</p>
+            </div>
           </Col>
         </Row>
       </Container>
