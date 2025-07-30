@@ -1,103 +1,129 @@
 /* Contenedor de habilidades */
 .skill-bx {
-    text-align: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Efectos de los iconos */
 .skill-bx .item {
-    position: relative;
-    display: inline-block;
-    padding: 15px;
-    transition: transform 0.3s ease-in-out;
-    overflow: hidden;
+  position: relative;
+  display: inline-block;
+  padding: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.4s ease;
 }
 
-/* Animación de giro solo para la imagen */
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
+/* Animación de rebote */
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(0.9);
+  }
+  60% {
+    transform: scale(1.05);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
-    100% {
-        transform: rotate(360deg);
-    }
+/* Animación de giro continuo */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Efectos para las imágenes dentro de los íconos */
 .skill-bx .item img {
-    width: 15vw;
-    height: 15vw;
-    max-width: 124px;
-    max-height: 124px;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    animation: rotate 5s infinite linear;
+  width: 15vw;
+  height: 15vw;
+  max-width: 124px;
+  max-height: 124px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: rotate 5s linear infinite; 
 }
 
-/* Cambiar el brillo al pasar el mouse */
-.skill-bx .item:hover img {
-    filter: brightness(1.3);
+/* Cambiar el brillo al pasar el mouse o al tocar el icono */
+.skill-bx .item:hover img,
+.skill-bx .item.touched img {
+  filter: brightness(1.3);
+  animation: bounce 1s ease; 
 }
 
 /* Estilo para el nombre de las habilidades */
 .skill-bx .item h5 {
-    margin-top: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fff;
-    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
-    position: relative;
-    z-index: 1;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+  position: relative;
+  z-index: 1;
 }
 
 /* Agregar un pequeño fondo de color al pasar el mouse sobre la imagen */
-.skill-bx .item:hover::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 15px;
-    z-index: -1;
+.skill-bx .item:hover::before,
+.skill-bx .item.touched::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  z-index: -1;
 }
 
 /* Responsividad */
 @media (max-width: 768px) {
-    .skill-bx .item {
-        padding: 10px;
-    }
+  .skill-bx .item {
+    padding: 10px;
+  }
 
-    .skill-bx .item h5 {
-        font-size: 0.9rem;
-    }
+  .skill-bx .item h5 {
+    font-size: 0.9rem;
+  }
 
-    .skill-bx .item img {
-        width: 20vw;
-        height: 20vw;
-        max-width: 100px;
-        max-height: 100px;
-    }
+  .skill-bx .item img {
+    width: 20vw;
+    height: 20vw;
+    max-width: 100px;
+    max-height: 100px;
+  }
 }
 
 @media (max-width: 480px) {
-    .skill-bx .item {
-        padding: 8px;
-    }
+  .skill-bx .item {
+    padding: 8px;
+  }
 
-    .skill-bx .item h5 {
-        font-size: 0.8rem;
-    }
+  .skill-bx .item h5 {
+    font-size: 0.8rem;
+  }
 
-    .skill-bx .item img {
-        width: 30vw;
-        height: 30vw;
-        max-width: 80px;
-        max-height: 80px;
-    }
+  .skill-bx .item img {
+    width: 30vw;
+    height: 30vw;
+    max-width: 80px;
+    max-height: 80px;
+  }
 }
-
-
-
