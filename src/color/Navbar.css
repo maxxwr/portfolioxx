@@ -36,3 +36,14 @@
         padding: 6px 12px;
     }
 }
+
+/* para eliminar el color de fondo verde cuando la hamburgesa esta activo */
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  background-color: transparent; 
+  border-color: transparent; 
+}
+
+.navbar-toggler-icon {
+  background-color: transparent; 
+}
