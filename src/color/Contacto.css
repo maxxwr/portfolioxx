@@ -57,3 +57,31 @@ input, textarea {
   font-weight: bold;
   text-shadow: 0 0 5px #c96d6d, 0 0 10px #bd6363;
 }
+
+
+
+/*  para el título de Contactame */
+.contact h2 {
+  font-size: 2.2rem; 
+  font-family: 'Times New Roman', serif; 
+  color: #fff;
+  text-transform: uppercase; 
+  letter-spacing: 4px; 
+  margin-bottom: 25px; 
+  position: relative;
+}
+/* Responsividad para tabletas */
+@media (max-width: 768px) {
+  .contact h2 {
+    font-size: 2.5rem; 
+    letter-spacing: 3px; 
+  }
+}
+
+/* Responsividad para móviles */
+@media (max-width: 480px) {
+  .contact h2 {
+    font-size: 2rem; 
+    letter-spacing: 2px; 
+  }
+}

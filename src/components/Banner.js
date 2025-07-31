@@ -17,7 +17,7 @@ export const Banner = () => {
   const toRotate = useMemo(() => [
     "Backend Developer",
     "Desarrollador Web",
-    "Deep Learning con Python",
+    "Deep Learning / Machine Learning",
     "Bases de Datos",
     ".. y más",
   ], []);
@@ -102,7 +102,7 @@ export const Banner = () => {
               <h2 className="banner-title">Hola, soy Max Winchez</h2>
               <h2 className="highlight-text">{text}</h2>
               <p className="description">
-                Desarrollo backend, frontend e integración de soluciones con Deep Learning.
+                Desarrollo backend, frontend e integración de soluciones con DL & ML.
               </p>
               <div className="projects-container">
                 <div className="projects-info">

@@ -85,3 +85,31 @@
 }
 
 
+/* Refinado estilo para el título de proyectos */
+.project h2 {
+  font-size: 2.3rem; 
+  font-family: 'Times New Roman', serif; 
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase; 
+  letter-spacing: 5px; 
+  margin-bottom: 25px; 
+  position: relative;
+}
+
+
+/* Responsividad para tabletas */
+@media (max-width: 768px) {
+  .project h2 {
+    font-size: 2.5rem; 
+    letter-spacing: 3px; 
+  }
+}
+
+/* Responsividad para móviles */
+@media (max-width: 480px) {
+  .project h2 {
+    font-size: 2rem; 
+    letter-spacing: 2px; 
+  }
+}

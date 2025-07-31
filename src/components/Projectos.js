@@ -105,6 +105,7 @@ export const Projects = () => {
       description: "Creación de un sistema personalizado de recomendaciones utilizando técnicas de IA y modelos de Deep Learning.",
       imgUrl: projImg11,
       className: "gif-image",
+      link: "https://mlcinema.streamlit.app/",
     },
     {
       title: "Clasificador de Datos",
@@ -139,13 +140,13 @@ export const Projects = () => {
                       variant="pills"
                       className="nav-pills mb-5 justify-content-center align-items-center w-100"
                       id="pills-tab"
-                      style={{ display: 'flex', flexWrap: 'nowrap', justifyContent: 'space-between' }} // Asegura que las pestañas estén en una fila
+                      style={{ display: 'flex', flexWrap: 'nowrap', justifyContent: 'space-between' }} 
                     >
                       <Nav.Item>
                         <Nav.Link eventKey="web">Proyectos Web</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="mobile">Proyectos Móviles</Nav.Link>
+                        <Nav.Link eventKey="mobile">Proyectos Moviles</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
                         <Nav.Link eventKey="ai">Proyectos IA</Nav.Link>
