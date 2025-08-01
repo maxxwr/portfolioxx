@@ -81,7 +81,7 @@
 .projects-container {
   display: inline-block;
   padding: 20px;
-  /*border: 1px solid rgba(255, 255, 255, 0.8); */ /*<-  ahyy es para cambiar el border*/
+  border: 1px solid rgba(255, 255, 255, 0.8); /*<- es para sombra al border del contenedor*/
   background: rgba(128, 0, 128, 0.1); 
   box-shadow: 0 4px 15px rgba(128, 0, 128, 0.5); 
   animation: breathingEffect 3s infinite ease-in-out; 
@@ -315,7 +315,7 @@
   .profile-img-wrapper {
     width: 100%;  
     height: 330px;
-    margin-top: 10px; /* <- reducion de contenedor de gif */
+    margin-top: 5px; /* <- reducion de contenedor de gif */
   }
   
   .projects-info {

@@ -17,28 +17,6 @@
   transition: all 0.4s ease;
 }
 
-/* Animación de rebote */
-@keyframes bounce {
-  0% {
-    transform: scale(1);
-  }
-  20% {
-    transform: scale(1.1);
-  }
-  40% {
-    transform: scale(0.9);
-  }
-  60% {
-    transform: scale(1.05);
-  }
-  80% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 /* Animación de giro continuo */
 @keyframes rotate {
   0% {
@@ -77,6 +55,7 @@
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
   position: relative;
   z-index: 1;
+  font-family: 'Times New Roman', serif;
 }
 
 /* Agregar un pequeño fondo de color al pasar el mouse sobre la imagen */
