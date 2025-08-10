@@ -369,3 +369,312 @@
   }
 }
 
+/*---------------------------------------------------------------------------------------------------------------------------*/
+/* para logros sus estiloss*/
+.logros {
+  padding: 20px 0;
+  background-color: transparent;
+}
+
+/* Estilo de la ventana modal */
+.certificates-modal .modal-content {
+  background: white; 
+  backdrop-filter: blur(10px); 
+  border-radius: 10px;
+  max-width: 90%;  
+  top: 21px; 
+}
+
+/* Estilos para las tarjetas de los certificados */
+.certificado-card {
+  text-align: center;
+  margin-bottom: -12px;  /*ahyy ess para levatar el contendir del modal*/ 
+  /* margin-bottom: -10px;*/ /*<-- o eso tambien sirve para levantar el model el contenedor*/
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificado-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.certificado-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Elimina el texto debajo de la imagen */
+.certificado-card p {
+  display: none;
+}
+
+/*  estilo para el boton cerrarr */
+.modal-header .close-button {
+  font-size: 1rem;
+  color: #fff;
+  background-color: red;
+  border: none;
+  border-radius: 0%; 
+  padding: 5px 10px; 
+  position: relative;
+  z-index: 1050;
+  transition: all 0.3s ease; 
+}
+
+.modal-header .close-button:hover {
+  background-color: #d32f2f; 
+  transform: scale(1.1); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.modal-header .close-button:active {
+  transform: scale(0.98); 
+}
+
+
+/* Estilo del botón "Ver Logros" */
+.btn-logros {
+  display: block;
+  margin: 20px auto;  
+  font-size: 10px;
+  color: #aaaaaa;  
+  background-color: transparent;  
+  border: 1px solid #fff;  
+  border-radius: 0px;  
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  text-align: center; 
+  font-weight: bold;  
+  text-transform: uppercase; 
+  writing-mode: vertical-rl; 
+  height: 120px; 
+  width: 40px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Efecto al pasar el mouse */
+.btn-logros:hover {
+  background-color: transparent; 
+  color: #aaaaaa; 
+  border-color: #fff; 
+}
+
+
+/* Estilo para el Modal en Dispositivos Móviles */
+@media (max-width: 767px) {
+  .certificates-modal .modal-content {
+    background: white;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    max-width: 100%;  
+    top: 0.5px; /* <-ahy es para subir mas el contendor del modal en cel*/
+  }
+
+  .certificado-card {
+    max-width: 100%; 
+    margin: 12px auto; /* <-ese espara agrandar el modeal en cel*/
+  }
+
+  .certificado-img {
+    width: 100%; 
+    height: auto; 
+    object-fit: contain; 
+  }
+
+  .btn-logros {
+    font-size: 10px;
+    height: 100px;
+    width: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .certificado-img {
+    width: 100%; 
+    height: auto;
+    object-fit: contain; 
+  }
+
+  .btn-logros {
+    font-size: 12px;
+    height: 120px;
+    width: 40px;
+  }
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* Contenedor paraa la paginación  */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px; 
+}
+
+/* esstilo para los botones de "Anterior" y "Siguiente" */
+.pagination-controls .pagination-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: 2px solid #ccc;
+  background-color: transparent;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto cuando pasa el mouse sobre los botones */
+.pagination-controls .pagination-button:hover {
+  background-color: #333; 
+  color: #fff; 
+}
+
+/* Efecto para deshabilitar el botón */
+.pagination-controls .pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Estilo para los números de página */
+.pagination-controls .page-number {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #4CAF50; 
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  height: 40px;
+  width: 40px; 
+ 
+}
+
+/* Efecto cuando pasa el mouse sobre los números de página */
+.pagination-controls .page-number:hover {
+  background-color: #333; 
+  color: #fff; 
+}
+
+.pagination-controls .page-number.active {
+  background-color: transparent; 
+  color: #333; 
+  border: 1px solid black;
+}
+
+@media (max-width: 767px) {
+  .pagination-controls {
+    flex-wrap: nowrap; /* se asegura que los botones estén en una sola línea */
+    overflow-x: auto; /* y sii hay más botones, permite hacer scroll horizontal */
+  }
+
+  .pagination-controls .pagination-button,
+  .pagination-controls .page-number {
+    margin-bottom: 10px;  
+    width: auto;  
+    padding: 8px 12px; /* <---ajusta en el tamaño de los botones */
+    font-size: 10px; /* <---reduce el tamaño de la fuente */
+  }
+
+  .pagination-controls .page-number.active {
+    background-color: #4CAF50; 
+    color: #fff;
+  }
+}
+/*--------------------------------------------------------*/
+
+/* estilo para descargar el botonn descargar cv" */
+.btn-descargar {
+  position: relative; /*es nesesario para k fucniiona con el botn */
+  top: -40px; /*para subir el botn asia arrriba */
+  padding: 10px 20px;
+  font-size: 10px;
+  color: #333; 
+  background-color: transparent; 
+  border: 2px solid #333; 
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+  margin-top: 0px; 
+  display: flex;
+  align-items: center; 
+}
+
+.btn-descargar:hover {
+  background-color: #333;  
+  color: #fff;  
+}
+
+@media (max-width: 767px) {
+  .btn-descargar {
+    font-size: 9px;  /* para reducir el tamaño del texto en móviles */
+    padding: 8px 15px;  /* para reducir el padding en móviles */
+  }
+}
+
+/* para eliminar la línea azul del enlace */
+a {
+  text-decoration: none; 
+}
+
+/* para edliminar el borde azul cuando se hace clic o hover sobre el enlace */
+a:focus,
+a:hover {
+  outline: none; 
+  box-shadow: none; /* para eliminar la sombra en el enlace */
+}
+
+
+/*---------------------------------------------------------------------*/
+/* essstilo para el botón en el perfil */
+.btn-contact {
+  position: relative; 
+  top: 10px; 
+  padding: 8px 20px; 
+  font-size: 10px; 
+  font-weight: 300; 
+  color: #aaaaaa;
+  background-color: transparent;
+  border: 2px solid #464545;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+  display: block; 
+  width: auto; 
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-top: 10px; 
+}
+
+/* Estilo cuando el botón está en hover */
+.btn-contact:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+/* Estilo cuando el botón es presionado */
+.btn-contact:active {
+  box-shadow: inset 2px 2px 6px rgba(177, 6, 6, 0.3);
+}
+
+/* Estilos responsivos para móviles */
+@media (max-width: 767px) {
+  .btn-contact {
+    font-size: 10px;
+    padding: 8px 15px; 
+    width: auto; 
+    margin-top: 10px; 
+  }
+}
+
+
