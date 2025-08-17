@@ -20,7 +20,7 @@ export const Newsletter = () => {
 
     if (telefono && !/^\d{9}$/.test(telefono)) {
       setStatus('error');
-      setMessage('Por favor, introduce un número de teléfono válido (9 dígitos).');
+      setMessage('¡Oops! Parece que el número de celular no es válido. Intenta de nuevo. 😅');
       return;
     }
 
@@ -31,26 +31,36 @@ export const Newsletter = () => {
     if (email || telefono) {
       emailjs
         .send(
-          process.env.REACT_APP_EMAILJS_SERVICE_ID, 
-          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+          process.env.REACT_APP_EMAILJS_SERVICE_ID_NEWSLETTER,
+          process.env.REACT_APP_EMAILJS_TEMPLATE_ID_NEWSLETTER,
           data,
-          process.env.REACT_APP_EMAILJS_USER_ID
+          process.env.REACT_APP_EMAILJS_USER_ID_NEWSLETTER
         )
         .then(
           (response) => {
-            setStatus('success');
-            setMessage('¡Correo o teléfono enviado con éxito!');
+            if (email && telefono) {
+              setStatus('success');
+              setMessage(`¡Tu correo y número de celular se enviaron con éxito! 😊`);
+            } else if (email) {
+              setStatus('success');
+              setMessage(`¡Tu correo electrónico se envió con éxito! 😊`);
+            } else if (telefono) {
+              setStatus('success');
+              setMessage(`¡Tu número de celular se envió con éxito! 😊`);
+            }
             setEmail('');
             setTelefono('');
+            console.log("Correo y celular enviado correctamente:", response);
           },
           (err) => {
             setStatus('error');
-            setMessage('Hubo un error al enviar el correo. Inténtalo más tarde.');
+            setMessage('Hubo un error al enviar el correo. Inténtalo más tarde. 😞');
+            console.error("Error al enviar el correo:", err);
           }
         );
     } else {
       setStatus('error');
-      setMessage('Por favor, introduce un correo electrónico o un número de celular.');
+      setMessage('¡Ups! Parece que olvidaste ingresar un correo o un número de celular. 😅');
     }
   };
 

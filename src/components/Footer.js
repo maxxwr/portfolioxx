@@ -38,7 +38,7 @@ export const Footer = () => {
               <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
                 <img src={navIcon3} alt="GitHub" />
               </a>
-              <a href="https://www.facebook.com/wr.max.404270" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/profile.php?id=100094055649759" target="_blank" rel="noopener noreferrer">
                 <img src={navIcon2} alt="Facebook" />
               </a>
             </div>

@@ -77,73 +77,78 @@
   }
 }
 
-/* Contenedor de proyectos */
+/************************************************************************/
+/* ccontenedor de proyectos */
 .projects-container {
   display: inline-block;
-  padding: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.8); /*<- es para sombra al border del contenedor*/
-  background: rgba(128, 0, 128, 0.1); 
-  box-shadow: 0 4px 15px rgba(128, 0, 128, 0.5); 
-  animation: breathingEffect 3s infinite ease-in-out; 
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(68, 36, 211, 0.527);
+  animation: breathingEffect 3s infinite ease-in-out, typingEffect 3s steps(30, end) 1; /*<- ahy para breathingEffect 0s en cero es para detener la respiracion del contenedor*/
   overflow: hidden;
   max-width: 100%;
   box-sizing: border-box;
+  background: linear-gradient(90.21deg, #4820f7 -5.91%, #7e1717 111.58%);
 }
 
-/* Información de proyectos */
 .projects-info {
   font-size: 2rem;
   font-weight: bold;
   color: #fff;
   text-align: center;
   white-space: nowrap;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); 
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  width: 0; 
+  animation: typingEffect 3s steps(30, end) forwards, breathingEffect 0s infinite ease-in-out;
 }
 
-/* Animación de respiración */
+/* animación de respiración */
 @keyframes breathingEffect {
   0%, 100% {
-    transform: scale(1); 
-    box-shadow: 0 4px 15px rgba(128, 0, 128, 0.5); 
-    background: rgba(128, 0, 128, 0.1); 
-    border-color: rgba(255, 255, 255, 0.8); 
+    transform: scale(1);
   }
   50% {
-    transform: scale(1.05); /* Expansión */
-    box-shadow: 0 8px 25px rgba(128, 0, 128, 0.8); 
-    background: rgba(128, 0, 128, 0.2); 
-    border-color: rgba(255, 255, 255, 0.6); 
+    transform: scale(1.00); /*<- ahy es para animarlo x ejmplo scale(1.05)*/
   }
 }
 
-/* Media Queries para Responsividad */
+/* animación de escritura*/
+@keyframes typingEffect {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 @media (max-width: 480px) {
   .projects-info {
-    font-size: 1.5rem; 
-    white-space: normal; 
+    font-size: 1.5rem;
+    white-space: normal;
   }
 
   .projects-container {
-    padding: 12px; 
-    max-width: 300px; 
-    margin: 4rem auto; 
+    padding: 12px;
+    max-width: 300px;
+    margin: 4rem auto;
   }
 }
 
-/* Pantallas extra pequeñas (teléfonos muy pequeños, como Galaxy Mini) */
 @media (max-width: 320px) {
   .projects-info {
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
   }
 
   .projects-container {
-    padding: 10px; 
-    max-width: 280px; 
-    margin: 5px auto; 
+    padding: 10px;
+    max-width: 280px;
+    margin: 5px auto;
   }
 }
-
-
+/**************************************************************/
 
 .social-links {
   position: absolute;
@@ -250,6 +255,7 @@
   }
 }
 
+/*para el color de la burbuja de la pantalla al pasar el mousee gaaa************************/
 .bubble {
   position: absolute;
   border-radius: 50%;
@@ -260,7 +266,7 @@
   transform: scale(0);
 }
 
-/* Ensuring bubbles appear and disappear with animation */
+/* es para asegurarse de que las burbujas aparezcan con el mouse sobre la pantalla */
 .bubble-active {
   animation: bubbleEffect 2s ease-out forwards;
 }

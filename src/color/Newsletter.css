@@ -24,7 +24,7 @@
 }
 
 .newsletter-bx:hover h3 {
-  color: #6e156e;
+  color: #660e66;
   transform: scale(1.1);
 }
 
@@ -47,8 +47,8 @@
 }
 
 .new-email-bx button {
+  background: linear-gradient(90.21deg, #4820f7  -5.91%, #7e1717  111.58%);
   padding: 15px 30px;
-  background-color: #E37F00;
   border: none;
   border-radius: 6px;
   color: white;
@@ -58,7 +58,6 @@
 }
 
 .new-email-bx button:hover {
-  background-color: #c16e00;
   transform: scale(1.1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -187,3 +186,8 @@
     transform: translateY(-5px);
   }
 }
+
+
+
+
+

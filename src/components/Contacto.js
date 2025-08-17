@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../assets/img/contact-img.svg";
+import contactImg from "../assets/img/contact-img1.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import emailjs from '@emailjs/browser';
@@ -48,7 +48,7 @@ export const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!validateForm()) {
-      setStatus({ succes: false, mensaje: "Por favor, completa todos los campos requeridos correctamente." });
+      setStatus({ succes: false, mensaje: "¡Oops! Por favor, completa todos los campos correctamente. 😅" });
       return;
     }
     setButtonText("Enviando...");
@@ -67,7 +67,7 @@ export const Contact = () => {
       .then(
         (response) => {
           console.log("Mensaje enviado con éxito:", response);
-          setStatus({ succes: true, mensaje: 'Mensaje enviado con éxito.' });
+          setStatus({ succes: true, mensaje: '¡Mensaje enviado con éxito! 😊' });
           setFormDetails(formInitialDetails);
           setFormErrors({});
         },

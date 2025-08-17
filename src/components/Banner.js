@@ -171,7 +171,7 @@ export const Banner = () => {
               </p>
               <div className="projects-container">
                 <div className="projects-info">
-                  Creo proyectos con pasion y dedicacion
+                  Transformando ideas en realidad
                 </div>
               </div>
             </div>
@@ -198,7 +198,7 @@ export const Banner = () => {
             <FaGithub />
           </a>
           <a
-            href="https://www.facebook.com/wr.max.404270"
+            href="https://www.facebook.com/profile.php?id=100094055649759"
             target="_blank"
             rel="noreferrer"
             className="social-icon"
